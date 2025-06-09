@@ -15,7 +15,10 @@ A modular backend system built with microservices architecture to simulate an IR
 
 ## Tech Stack
 
-Node.js with Express.js, MongoDB with Mongoose ODM, JSON Web Tokens (JWT) for authentication, RESTful APIs for service communication.
+- Node.js with Express.js
+- MongoDB with Mongoose ODM
+- JSON Web Tokens (JWT) for authentication
+- RESTful APIs for service communication
 
 ## Features
 
@@ -36,5 +39,47 @@ Node.js with Express.js, MongoDB with Mongoose ODM, JSON Web Tokens (JWT) for au
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/ashu6783/IRCTC-Microservices-Backend.git
+   git clone https://github.com/yourusername/IRCTC-Microservices-Backend.git
    cd IRCTC-Microservices-Backend
+   ```
+
+2. Install dependencies for each service:
+
+   ```bash
+   cd auth-service
+   npm install
+   # Repeat for other services as needed
+   ```
+
+3. Set up environment variables for each service (see `.env` in `auth-service` for example).
+
+4. Start each service:
+
+   ```bash
+   npm start
+   ```
+
+5. Access the APIs at their respective ports.
+
+## Folder Structure
+
+```
+api-gateway/
+auth-service/
+booking-service/
+notification-service/
+payment-service/
+train-service/
+```
+
+Each service contains its own `package.json`, routes, controllers, and configuration.
+
+## Example: Auth Service Endpoints
+
+- `POST /api/auth/register` — Register a new user
+- `POST /api/auth/login` — Login and receive JWT
+- `GET /api/auth/users` — Get all users (admin only, protected)
+
+## License
+
+MIT
